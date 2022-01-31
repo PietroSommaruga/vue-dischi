@@ -1,0 +1,13 @@
+
+main {
+    height: 1000px;
+    background-color: #2e3a46;
+}
+
+.card-container {
+    margin: 0 auto;
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

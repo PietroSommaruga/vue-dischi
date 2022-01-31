@@ -1,0 +1,22 @@
+
+    .disk-card {
+        width: 200px;
+        height: 300px;
+        background: #646d778e;
+        border-radius: 5px; 
+         
+        img{
+            height: 50%;
+        }
+
+        h6 {
+            text-transform: uppercase;
+            color: rgb(199, 199, 199);
+            
+        }
+
+        p, span{
+            
+            color: #777;
+        }
+    }

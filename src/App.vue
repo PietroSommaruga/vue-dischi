@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header-content @filtro="filterGenre"/>
-      <main-container :discs="filteredDischi"/>
+      <main-container :discs="filteredDiscs"/>
   </div>
 </template>
 
@@ -19,13 +19,13 @@ export default {
   data() {
     return {
       discs : [],
-      filteredDischi: [],
+      filteredDiscs: [],
     }
   },
   mounted() {
     axios.get(' https://flynn.boolean.careers/exercises/api/array/music').then((result) => {
       this.discs = result.data.response
-      this.filteredDischi = result.data.response
+      this.filteredDiscs = result.data.response
       
       
     })
@@ -35,9 +35,9 @@ export default {
     // ----- filtro per genere -----
     filterGenre(selectedValue) {
       if (selectedValue === 'All') {
-        this.filteredDischi = this.discs;
+        this.filteredDiscs = this.discs;
       } else {
-        this.filteredDischi = this.discs.filter((disk) => {
+        this.filteredDiscs = this.discs.filter((disk) => {
           return disk.genre.includes(selectedValue); 
         });
       }
